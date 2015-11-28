@@ -1,0 +1,37 @@
+body{
+    background-color: #ccc;
+    font-family: 'Droid Sans', sans-serif;
+}
+#fm{
+    max-width: 200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow:  0 0 10px grey;
+    padding: 20px;
+    border-radius: 3px;
+    text-align: center;
+}
+input[type=text]{
+    border-radius: 3px;
+    border: 1px solid grey;
+    text-align: center;
+    box-shadow: 0 0 8px grey;
+}
+input:invalid{
+    border: 1px solid lightcoral;
+}
+input:focus{
+    border: 1px solid darkgrey;
+}
+#bt{
+    margin-top: 10px;
+    background: cornflowerblue;
+    border: 1px dashed #393939;
+    color: white;
+    font-size: 1.2em;
+    border-radius: 3px;
+}
+
+#bt:hover{
+    background: #4a6eaf;
+}

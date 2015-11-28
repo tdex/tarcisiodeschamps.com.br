@@ -1,0 +1,72 @@
+@font-face {
+    font-family: "social-icon";
+    src: url(../fonts/Socialico.otf);
+}@font-face {
+    font-family: "social-icon-plus";
+    src: url(../fonts/Socialico%20Plus.otf);
+}
+
+body{
+    background: #9e30ff;
+    /*position: relative;*/
+}
+
+header, main{
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+header{
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 1em;
+}
+header h1{
+    font-size: 4em;
+    margin: 1em auto 0.2em;
+    padding: 0;
+}
+header .socialIcon{
+    font-family: social-icon, sans-serif;
+    color: #FFFFFF;
+    font-size: 3em;
+    padding: 0 0.1em;
+}
+header .socialIconPlus{
+    font-family: social-icon-plus,sans-serif;
+}
+
+main{
+    text-align: center;
+}
+main > a{
+    display: inline-block;
+    background: #fff;
+    padding: 1.7em 0;
+    box-shadow: 0 2pt 0.3em #6622aa;
+    width: 310px;
+    margin: 0.4em 0.35em;
+    font-size: 1.2em;
+    transition: background 300ms, color 300ms;
+}
+main > a:hover{
+    background: #cccccc;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.bt-voltar{
+    display: block;
+    background: #70b718;
+    padding: 0.2em 0.4em;
+    color: white;
+    border-radius: 3px;
+    margin: 1.2em auto 1.2em;
+    border: none;
+}
+a{text-decoration: none;}
+
+.provas{
+    background-color: #00c161;
+    color: #fff;
+}

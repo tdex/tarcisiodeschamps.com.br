@@ -1,0 +1,54 @@
+/* Created by Tarcísio on 29/07/2014.*/
+
+
+body{
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #eee;
+}
+
+#corpo{
+    box-sizing: border-box;
+    margin: 10px auto;
+    max-width: 980px;
+    display: flex;
+    box-shadow: 0 0 12px #ccc;
+}
+#navegacao{
+    background-color: #FFF;
+    flex: 20% ;
+    min-width: 115px;
+    border-radius: 4px 0 0 4px;
+}
+#artigos{
+    flex: 80%;
+    display: inline-block;
+    background-color: #5aa2ed;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    padding: 20px;
+}
+
+article p{
+    font-weight: 100;
+}
+nav ul{
+    padding: 0;
+}
+nav li{
+    text-align: right;
+    font-size: 20px;
+    list-style: none;
+    padding: 15px;
+    cursor: pointer;
+}
+nav li:hover{
+    background-color: #4a7ebc !important;
+}
+article{display: none}
+
+footer{
+    color: #696969;
+    text-align: center;
+    font-size: 12px ;
+}
