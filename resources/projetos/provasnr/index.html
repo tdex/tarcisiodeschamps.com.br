@@ -20,7 +20,7 @@
       <a href={{email}} target="_blank" class="socialIcon socialIconPlus email">m</a>
     </header>
     <nav>
-      <input type="search" ng-model='busca' class="form-control busca" placeholder="Pesquisar">
+      <input type="search" ng-model='busca' class="form-control busca" placeholder="Pesquisar" tabindex="1">
     </nav>
     <main ng-controller='provas'>
       <a ng-repeat='p in prova | filter: busca' class={{p.classe}} href={{p.pdf}}>
