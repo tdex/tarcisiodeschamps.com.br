@@ -1,6 +1,6 @@
 var app = angular.module('myApp', []);
 app.controller('app', function($scope){
-  $scope.nomeSite = 'Tarcisio Deschamps Silva',
+  $scope.nomeSite = 'Tarcísio Deschamps Silva',
   $scope.facebook = 'http://fb.com/tarcisio.deschamps',
   $scope.gplus = 'https://plus.google.com/+TarcisioDeschamps/posts',
   $scope.youtube = 'http://www.youtube.com/deschampsi',
