@@ -44,15 +44,28 @@
       }
       .item{
         padding: 8px;
+        margin: 5px 0 ;
+        border-radius: 3px;
       }
       .item > span{
         float: right;
       }
       li.item:nth-child(odd){
+        border: 1px solid #d5c9c9;
         background-color: #FFF;
         box-shadow: 0 1px 5px #CCC;
-        border-radius: 3px;
+
+      }li.item:nth-child(even){
+        border: 1px solid #d5c9c9;
+        background-color: #e6dcdc;
+        box-shadow: 0 1px 5px #e7cfcf;
       }
+      li.item:hover, #menu:hover{
+        cursor: pointer;
+        background-color: #2562b3;
+        color: #FFF;
+      }
+
       .addCt{
         margin-bottom: 20px !important;
         /*display: none;*/
