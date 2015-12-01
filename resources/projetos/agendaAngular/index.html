@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="agenda">
+  <head>
+    <meta charset="utf-8">
+    <title>lista telefonica</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script type="text/javascript">
+      var app = angular.module('agenda', []);
+      app.controller("listaTelefonica", function($scope){
+        $scope.contato = [
+          {nome: 'Tarcísio Deschamps Silva', telefone: '81997832836'},
+          {nome: 'Cimara Sá', telefone: '81997866656'},
+          {nome: 'Brena Lima', telefone: '81554684587'}
+        ];
+        $scope.addContato = function(){
+          $scope.contato.push({nome: $scope.nomeIn, telefone: $scope.telefoneIn});
+          $scope.nomeIn = null;
+          $scope.telefoneIn = null;
+        }
+      });
+    </script>
+    <style>
+      #lista{
+        width: 400px;
+        margin: 20px auto;
+        background-color: #EEE;
+        padding: 0 20px 20px;
+        box-shadow: 0 1px 5px #BBB;
+        border-radius: 3px;
+      }
+      h3{
+        text-align: center;
+        margin: 0; padding: 10px;
+      }
+      .form-control{
+        margin: 0 0 10px;
+        padding: 8px
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .item{
+        padding: 8px;
+      }
+      .item > span{
+        float: right;
+      }
+      li.item:nth-child(odd){
+        background-color: #FFF;
+        box-shadow: 0 1px 5px #CCC;
+        border-radius: 3px;
+      }
+      .addCt{
+        margin-bottom: 20px !important;
+        /*display: none;*/
+      }
+      #menu{
+        border: none;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body ng-controller='listaTelefonica'>
+    <div id="lista">
+      <h3>
+        <button ng-click='addCt = true' id="menu" label="adicionar">&equiv;</button>
+        Lista Telefônica
+      </h3>
+      <div ng-show='addCt' class="addCt">
+        <form>
+          <h4>Adicionar contato</h4>
+          <input type="text" placeholder="Nome" ng-model='nomeIn' class="form-control">
+          <input type="text" placeholder="Telefone" ng-model='telefoneIn' class="form-control">
+          <button ng-click='addContato(); addCt=false' class="btn btn-primary btn-block" type="submit" >Adicionar</button>
+          <!-- ng-click='addCt=false' -->
+        </form>
+      </div>
+      <input type="text" ng-model='busca' placeholder="Pesquisar contato" class="form-control">
+      <ul>
+        <li ng-repeat='x in contato | filter: busca' class="item">
+            <b>{{x.nome}} </b> <span class="number">{{x.telefone}}</span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
