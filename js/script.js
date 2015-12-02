@@ -9,6 +9,10 @@ app.controller('app', function($scope){
 app.controller('projetos', function($scope){
   $scope.projeto = [
     {
+      nome: 'Agenda AngularJs',
+      url: 'resources/projetos/agendaAngular/index.html'
+    },
+    {
       nome: 'Provas Nova Roma',
       url: 'resources/projetos/provasnr/index.html',
       classe: 'provas'

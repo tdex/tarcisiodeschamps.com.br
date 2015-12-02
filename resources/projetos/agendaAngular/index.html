@@ -85,8 +85,8 @@
       <div ng-show='addCt' class="addCt">
         <form>
           <h4>Adicionar contato</h4>
-          <input type="text" placeholder="Nome" ng-model='nomeIn' class="form-control">
-          <input type="text" placeholder="Telefone" ng-model='telefoneIn' class="form-control">
+          <input type="text" placeholder="Nome" ng-model='nomeIn' class="form-control" required>
+          <input type="text" placeholder="Telefone" ng-model='telefoneIn' class="form-control" maxlength="15" required>
           <button ng-click='addContato(); addCt=false' class="btn btn-primary btn-block" type="submit" >Adicionar</button>
           <!-- ng-click='addCt=false' -->
         </form>
