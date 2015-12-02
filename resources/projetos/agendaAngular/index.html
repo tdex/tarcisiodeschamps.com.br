@@ -2,6 +2,7 @@
 <html ng-app="agenda">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>lista telefonica</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
@@ -14,9 +15,14 @@
           {nome: 'Brena Lima', telefone: '81554684587'}
         ];
         $scope.addContato = function(){
-          $scope.contato.push({nome: $scope.nomeIn, telefone: $scope.telefoneIn});
-          $scope.nomeIn = null;
-          $scope.telefoneIn = null;
+          if ($scope.nomeIn != undefined && $scope.telefoneIn != undefined) {
+            $scope.contato.push({nome: $scope.nomeIn, telefone: $scope.telefoneIn});
+            $scope.nomeIn = undefined;
+            $scope.telefoneIn = undefined;
+            console.log("contato adicionado com sucesso!");
+          } else {
+            console.log("tentativa de adicionar contato em branco!");
+          }
         }
       });
     </script>
@@ -74,6 +80,9 @@
         border: none;
         border-radius: 5px;
       }
+      input:invalid{
+        border: 1px solid red;
+      }
     </style>
   </head>
   <body ng-controller='listaTelefonica'>
@@ -85,8 +94,8 @@
       <div ng-show='addCt' class="addCt">
         <form>
           <h4>Adicionar contato</h4>
-          <input type="text" placeholder="Nome" ng-model='nomeIn' class="form-control" required>
-          <input type="text" placeholder="Telefone" ng-model='telefoneIn' class="form-control" maxlength="15" required>
+          <input type="text" placeholder="Nome" ng-model='nomeIn' class="form-control" >
+          <input type="number" placeholder="Telefone" ng-model='telefoneIn' class="form-control" maxlength="15">
           <button ng-click='addContato(); addCt=false' class="btn btn-primary btn-block" type="submit" >Adicionar</button>
           <!-- ng-click='addCt=false' -->
         </form>
