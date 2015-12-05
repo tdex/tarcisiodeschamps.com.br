@@ -12,6 +12,11 @@ app.controller('app', function($scope){
 app.controller('provas', function($scope){
   $scope.prova = [
     {
+      disciplina: 'Gerencia de Infraestrutura de TI - P2',
+      pdf: 'provas/GerenciaInfraEstrutura_P2.pdf',
+      classe: 'p2'
+    },
+    {
       disciplina: 'Teoria da Computação - P1',
       pdf: 'provas/TeoriaDaComputacao_P1.pdf',
       classe: 'p1'
