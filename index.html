@@ -12,14 +12,14 @@
   </head>
   <body ng-controller='app'>
     <header>
-      <h1>{{nomeSite}}</h1>
+      <h1 ng-bind="nomeSite"></h1>
       <a href={{facebook}} target="_blank" class="socialIcon face">f</a>
       <a href={{gplus}} target="_blank" class="socialIcon socialIconPlus gplus">h</a>
       <a href={{youtube}} target="_blank" class="socialIcon youtube">x</a>
       <a href={{email}} target="_blank" class="socialIcon socialIconPlus email">m</a>
     </header>
     <main ng-controller='projetos'>
-      <a ng-repeat='p in projeto' href={{p.url}} class={{p.classe}}>{{p.nome}}</a>
+      <a ng-repeat='p in projeto' href={{p.url}} class={{p.classe}} ng-bind="p.nome"></a>
     </main>
   </body>
 </html>

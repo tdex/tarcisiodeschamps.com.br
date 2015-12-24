@@ -8,12 +8,12 @@
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/estilo.css">
-    <title>Tarcísio Deschamps Silva</title>
+    <title>Provas Nova Roma - Tarcísio Deschamps Silva</title>
   </head>
   <body ng-controller='app'>
     <header>
-      <h1>{{nomeSite}}</h1>
-      <a href={{homeurl}} id='home' ><h2>{{nomeHome}}</h2></a>
+      <h1 ng-bind="nomeSite"></h1>
+      <a href={{homeurl}} id='home'><h2 ng-bind="nomeHome"></h2></a>
       <a href={{facebook}} target="_blank" class="socialIcon face">f</a>
       <a href={{gplus}} target="_blank" class="socialIcon socialIconPlus gplus">h</a>
       <a href={{youtube}} target="_blank" class="socialIcon youtube">x</a>
@@ -23,14 +23,10 @@
       <input type="search" ng-model='busca' class="form-control busca" placeholder="Pesquisar" tabindex="1">
     </nav>
     <main ng-controller='provas'>
-      <a ng-repeat='p in prova | filter: busca' class={{p.classe}} href={{p.pdf}}>
-        {{p.disciplina}}
-      </a>
+      <a ng-repeat='p in prova | filter: busca' class={{p.classe}} href={{p.pdf}} ng-bind="p.disciplina"></a>
     </main>
     <footer>
-      <p>
-        {{descricao}}
-      </p>
+      <p ng-bind="descricao"></p>
     </footer>
   </body>
 </html>
