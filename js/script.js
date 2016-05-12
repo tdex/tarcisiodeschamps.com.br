@@ -8,19 +8,20 @@ app.controller('app', function($scope){
 });
 app.controller('projetos', function($scope){
   $scope.projeto = [
-    {
+/*    {
       nome: 'Agenda AngularJs',
       url: 'resources/projetos/agendaAngular/index.html'
     },
-    {
+*/    {
       nome: 'Provas Nova Roma',
       url: 'resources/projetos/provasnr/index.html',
       classe: 'provas'
-    },
+    }
+    /*,
     {
       nome: 'Push Menu jQuery',
       url: 'resources/projetos/pushMenu/index.html'
-    },
+    }*/,
     {
       nome: 'Blitz bafômetro' ,
       url: 'resources/projetos/blitzLeiSeca/index.html'
